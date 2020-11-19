@@ -14,7 +14,6 @@ kami melakukan observasi di RW 1, Kelurahan Kebon Kelapa, Kecamatan Gambir, Jaka
 pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 
 
-
 ## Use Case Diagram ##
 
 ### Screenshot of our web app ###
@@ -27,6 +26,9 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 - [ ] JualBeli
 - [ ] UMKM
 - [ ] Digitalisasi Dokumen
+
+### visits our page ###
+- [RWpintar](HCIteamB.github.io )
 
 ## Our teams ##
 - Muhammad Daffa Haryadi Putra
