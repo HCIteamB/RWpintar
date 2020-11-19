@@ -13,6 +13,9 @@ Our project aim is to help citizen association digitalized their database, socia
 kami melakukan observasi di RW 1, Kelurahan Kebon Kelapa, Kecamatan Gambir, Jakarta pusat. Pada observasi kali ini kami mewawancarai 8 narasumber termasuk
 pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 
+> here's our mini report about this Interview
+> [report](https://github.com/HCIteamB/RWpintar/blob/main/firstphase.md)
+
 ### Narasumber ###
 - Narasumber 1 Efendi Audi (wakil ketua Karang Taruna RW 1)
 - Narasumber 2 Rudi (Warga sekitar)
@@ -55,6 +58,9 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 ## Use Case Diagram ##
 ![UseCase Diagram](./Assets/RWpintar.png)
 
+## Key Activity Diagram ##
+![keyactivity](./Assets/activity-diagram.png)
+
 ### Screenshot of our web app ###
 ![Screenshot](./Assets/landing.png)
 
@@ -72,6 +78,13 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 - [ ] Forum Jual Beli (marketplace UMKM)
 - [ ] Panic Button
 - [ ] Mobile UI / Mobile Apps
+
+## 2nd phase of Data Gathering ##
+> here's our video on 2nd phase data gathering [video](https://drive.google.com/drive/folders/18MugDFfeybF6qRyJQPVzrbrhlQfc4QRe)
+
+## final report ##
+[our final report]()
+
 
 ### visits our page ###
 - [RWpintar](https://hciteamb.github.io/)
