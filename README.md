@@ -83,14 +83,14 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 > here's our video on 2nd phase data gathering [video](https://drive.google.com/drive/folders/18MugDFfeybF6qRyJQPVzrbrhlQfc4QRe)
 
 ## final report ##
-[our final report]()
+[our final report](https://github.com/HCIteamB/RWpintar/blob/main/final-report.pdf)
 
 
 ### visits our page ###
 - [RWpintar](https://hciteamb.github.io/)
 
 ## Our teams ##
-- Muhammad Daffa Haryadi Putra
+ Muhammad Daffa Haryadi Putra
 - [GeminorumB](https://github.com/GeminorumB) \\ 1313619034
 - Muhammad Ridho Rizqillah 
 - [Renespeare](https://github.com/Renespeare) \\ 1313619033
