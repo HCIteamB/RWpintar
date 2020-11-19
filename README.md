@@ -80,7 +80,7 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 - Muhammad Daffa Haryadi Putra
 - [GeminorumB](https://github.com/GeminorumB) \\ 1313619034
 - Muhammad Ridho Rizqillah 
-- [Renespeare](https://github.com/Renespeare) \\ 1313
+- [Renespeare](https://github.com/Renespeare) \\ 1313619033
 - Muhammad Hafidz Hisbullah
 - [DragonFly378](https://github.com/DragonFly378) \\ 1313619019
 
