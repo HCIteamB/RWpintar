@@ -68,12 +68,12 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 - [ ] manajemen RW
 - [ ] Database Center
 - [ ] LaporRW
-- [ ] Chatt warga
 - [ ] Eksplorasi RW
 - [ ] UMKM Search
 - [ ] Data Bansos
 
 ## Planned Features ##
+- [ ] Chatt warga
 - [ ] Digitalisasi Dokumen
 - [ ] Forum Jual Beli (marketplace UMKM)
 - [ ] Panic Button
