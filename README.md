@@ -91,7 +91,7 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 
 ## Our teams ##
  Muhammad Daffa Haryadi Putra
-- [GeminorumB](https://github.com/GeminorumB) \\ 1313619034
+- [Takachii15](https://github.com/Takachii15) \\ 1313619034
 - Muhammad Ridho Rizqillah 
 - [Renespeare](https://github.com/Renespeare) \\ 1313619033
 - Muhammad Hafidz Hisbullah
