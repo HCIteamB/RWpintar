@@ -90,7 +90,7 @@ pengurus RW dan Pengurus Karang Taruna di lingkungan RW 1 Kebon Kelapa
 - [RWpintar](https://hciteamb.github.io/)
 
 ## Our teams ##
- Muhammad Daffa Haryadi Putra
+- Muhammad Daffa Haryadi Putra
 - [Takachii15](https://github.com/Takachii15) \\ 1313619034
 - Muhammad Ridho Rizqillah 
 - [Renespeare](https://github.com/Renespeare) \\ 1313619033
