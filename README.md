@@ -1,7 +1,24 @@
 # Branch for developing RWpintar website
 
+## Project Specs ( *IMPORTANT* ) 
+- role based users (staff and user)
+- user -> register -> some data from register enter databaseRW
+- UMKM Database managed from admins
+- UMKM and databaseRW pages
+- kotak saran pages to input suggestion -> data can only be seen from admin page
+- users can register from front-end
+- RWexplore managed from admin pages
+- Mobile UI friendly
+
+## Possible features in the future
+- chatting 
+- Danger notification
+- features to saved digitalized document
+
 ## TODO list
-- [ ] Make base template 
+- [x] Make base template for pages 
+- [ ] make html file for static pages (home and about)
+- [ ] make database model scheme
 - [ ] Make database model
   - [ ] model for...
 - [ ] make ....
