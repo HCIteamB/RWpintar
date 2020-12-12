@@ -10,3 +10,5 @@ def about(request):
 
 def biodate(request):
     return render
+
+
