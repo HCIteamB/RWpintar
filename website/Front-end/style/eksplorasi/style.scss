@@ -1,0 +1,197 @@
+html {
+  scroll-behavior: smooth;
+}
+
+// Navbar-section
+.section-navbar {
+  // z-index: 999;
+  // overflow: hidden;
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
+  background-color: #9360fa !important;
+  .container {
+    .navbar {
+      .logo {
+        img {
+          width: 184px;
+        }
+      }
+
+      .navbar-konten {
+        a {
+          color: white !important;
+          font-size: 20px;
+
+          &:hover {
+            color: rgb(95, 250, 255) !important;
+            transition: all 0.4s ease-in-out;
+            font-weight: bold;
+          }
+          &:active {
+            color: #eca100;
+            font-weight: bold;
+          }
+        }
+
+        ul {
+          margin-top: 10px;
+          li {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            margin-right: 25px;
+
+            .dropdown-menu {
+              a {
+                color: rgb(37, 37, 37) !important;
+              }
+            }
+          }
+        }
+
+        button {
+          color: black;
+          margin-top: 10px;
+          font-family: "Ubuntu", sans-serif;
+          background-color: #00fff7;
+          padding: 10px 20px;
+
+          &:hover {
+            background-color: rgb(250, 78, 158);
+            font-weight: bold;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Hero Section
+.section-hero {
+  background-image: url(../../../Files/components/homepage/bg-hero.png);
+  min-height: 860px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+
+  .kiri {
+    img {
+      height: 360px;
+    }
+  }
+
+  .kanan {
+    margin-top: 100px;
+    padding-left: 60px;
+    p {
+      color: white;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 700;
+      font-size: 46px;
+    }
+
+    .mulai {
+      padding: 10px 25px;
+      border-radius: 3px;
+      background: rgb(0, 255, 174);
+      box-shadow: 0px 0px 5px #474747;
+      margin-right: 36px;
+      margin-top: 52px;
+      color: black;
+
+      &:hover {
+        background-color: rgb(29, 255, 240);
+        font-weight: 500;
+        box-shadow: 0px 0px 5px #00dcec;
+      }
+    }
+
+    .eksplorasi {
+      color: rgb(155, 0, 103);
+      padding: 10px 25px;
+      border-radius: 3px;
+      background: #a7efff;
+      box-shadow: 0px 0px 5px #47768a;
+      margin-top: 52px;
+      &:hover {
+        color: #00dcec;
+        background-color: rgb(255, 255, 255);
+        font-weight: 500;
+        box-shadow: 0px 0px 5px #00dcec;
+      }
+    }
+  }
+}
+
+//Footer
+.section-footer {
+  padding-top: 50px;
+  background-color: #9360fa;
+  color: #ffe66c;
+  h5 {
+    font-weight: bold;
+  }
+  a {
+    color: #ffe66c;
+  }
+  .copy {
+    height: 30px;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+    color: #9360fa;
+    p {
+      font-weight: 400 !important;
+    }
+  }
+}
+
+// media screen
+@media screen and (max-width: 1000px) {
+  .section-navbar {
+    .navbar-konten {
+      margin-left: 0px !important;
+
+      ul {
+        margin-top: 10px;
+        li {
+          font-family: "Ubuntu", sans-serif;
+          font-weight: 400;
+          margin-right: 25px;
+          border-bottom: 1px solid antiquewhite;
+
+          a {
+            color: white !important;
+            font-size: 20px;
+
+            &:hover {
+              color: rgb(95, 250, 255) !important;
+              transition: all 0.4s ease-in-out;
+              font-weight: bold;
+              border-bottom: 1px solid aqua;
+            }
+          }
+        }
+      }
+
+      button {
+        margin-top: 20px !important;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .section-hero {
+    min-height: 760px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+
+    .kiri {
+      img {
+        height: 200px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
