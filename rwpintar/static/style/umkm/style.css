@@ -1,0 +1,184 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.section-navbar {
+  background-color: transparent !important;
+}
+
+.section-navbar .container .navbar .logo img {
+  width: 184px;
+}
+
+.section-navbar .container .navbar .navbar-konten a {
+  color: white !important;
+  font-size: 20px;
+}
+
+.section-navbar .container .navbar .navbar-konten a:hover {
+  color: #5ffaff !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-weight: bold;
+}
+
+.section-navbar .container .navbar .navbar-konten a:active {
+  color: #eca100;
+  font-weight: bold;
+}
+
+.section-navbar .container .navbar .navbar-konten ul {
+  margin-top: 10px;
+}
+
+.section-navbar .container .navbar .navbar-konten ul li {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  margin-right: 25px;
+}
+
+.section-navbar .container .navbar .navbar-konten ul li .dropdown-menu a {
+  color: #252525 !important;
+}
+
+.section-navbar .container .navbar .navbar-konten button {
+  color: black;
+  margin-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #00fff7;
+  padding: 10px 20px;
+}
+
+.section-navbar .container .navbar .navbar-konten button:hover {
+  background-color: #fa4e9e;
+  font-weight: bold;
+  color: white;
+}
+
+.section-hero {
+  background-image: url(../../../Files/components/UMKM/backdrop_umkm.svg);
+  min-height: 660px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -120px;
+  padding-top: 180px;
+}
+
+.konten-section .title-konten {
+  color: #7611c3;
+  font-family: "Bebas Neue";
+  font-weight: normal;
+  font-size: 40px;
+  letter-spacing: 0.01em;
+}
+
+.konten-section .umkm-konten {
+  border-radius: 7px;
+  background: #f3f3f3;
+  padding: 20px 29px;
+}
+
+.konten-section .umkm-konten .umkm-title {
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-columns: #333;
+          columns: #333;
+  margin-top: 10px;
+}
+
+.konten-section .umkm-konten .konten-isi {
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+.konten-section .umkm-konten .konten-isi p {
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #000;
+}
+
+.konten-section .umkm-konten .konten-isi a {
+  color: #9360fa;
+}
+
+.konten-section .umkm-konten .konten-isi a:hover {
+  color: #2d0974;
+}
+
+.section-footer {
+  padding-top: 50px;
+  background-color: #9360fa;
+  color: #ffe66c;
+}
+
+.section-footer h5 {
+  font-weight: bold;
+}
+
+.section-footer a {
+  color: #ffe66c;
+}
+
+.section-footer .copy {
+  height: 30px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  color: #9360fa;
+}
+
+.section-footer .copy p {
+  font-weight: 400 !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-navbar {
+    background-color: #9360fa !important;
+  }
+  .section-navbar .logo img {
+    width: 124px !important;
+  }
+  .section-navbar .navbar-konten {
+    margin-left: 0px !important;
+  }
+  .section-navbar .navbar-konten ul {
+    margin-top: 10px;
+  }
+  .section-navbar .navbar-konten ul li {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    margin-right: 25px;
+    border-bottom: 1px solid antiquewhite;
+  }
+  .section-navbar .navbar-konten ul li a {
+    color: white !important;
+    font-size: 20px;
+  }
+  .section-navbar .navbar-konten ul li a:hover {
+    color: #5ffaff !important;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-weight: bold;
+    border-bottom: 1px solid aqua;
+  }
+  .section-navbar .navbar-konten button {
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+  }
+  .section-hero {
+    margin-top: 0px;
+    min-height: 460px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 160px;
+  }
+  .section-hero img {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

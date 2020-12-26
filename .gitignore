@@ -153,7 +153,7 @@ dmypy.json
 /media
 
 /static
-
+/media
 # End of https://www.toptal.com/developers/gitignore/api/django
 
 # For backup if neovim fail
