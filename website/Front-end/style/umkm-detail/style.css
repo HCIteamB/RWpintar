@@ -1,0 +1,215 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.slide-fade-enter-active {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-active {
+  -webkit-transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0.5;
+}
+
+.section-navbar {
+  background-color: #9360fa !important;
+}
+
+.section-navbar .container .navbar .logo img {
+  width: 184px;
+}
+
+.section-navbar .container .navbar .navbar-konten a {
+  color: white !important;
+  font-size: 20px;
+}
+
+.section-navbar .container .navbar .navbar-konten a:hover {
+  color: #5ffaff !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-weight: bold;
+}
+
+.section-navbar .container .navbar .navbar-konten a:active {
+  color: #eca100;
+  font-weight: bold;
+}
+
+.section-navbar .container .navbar .navbar-konten ul {
+  margin-top: 10px;
+}
+
+.section-navbar .container .navbar .navbar-konten ul li {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  margin-right: 25px;
+}
+
+.section-navbar .container .navbar .navbar-konten ul li .dropdown-menu a {
+  color: #252525 !important;
+}
+
+.section-navbar .container .navbar .navbar-konten button {
+  color: black;
+  margin-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #00fff7;
+  padding: 10px 20px;
+}
+
+.section-navbar .container .navbar .navbar-konten button:hover {
+  background-color: #fa4e9e;
+  font-weight: bold;
+  color: white;
+}
+
+.konten-section {
+  border-radius: 7px;
+  background: #f3f3f3;
+  padding: 31px 48px;
+}
+
+.gallery {
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  border-radius: 10px;
+}
+
+.gallery .thumbnail-image {
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+}
+
+.gallery .thumbnail-image:hover, .gallery .thumbnail-image.active {
+  border: 5px solid #9360fa;
+}
+
+.deskripsi .judul-umkm {
+  margin-bottom: 5px;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  line-height: 50px;
+  text-align: left;
+  color: #7611c3;
+}
+
+.deskripsi .artikel {
+  padding: 12px 18px;
+  background-color: white;
+  font-family: Assistant;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+.section-footer {
+  padding-top: 50px;
+  background-color: #9360fa;
+  color: #ffe66c;
+}
+
+.section-footer h5 {
+  font-weight: bold;
+}
+
+.section-footer a {
+  color: #ffe66c;
+}
+
+.section-footer .copy {
+  height: 30px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  color: #9360fa;
+}
+
+.section-footer .copy p {
+  font-weight: 400 !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-navbar .navbar-konten {
+    margin-left: 0px !important;
+  }
+  .section-navbar .navbar-konten ul {
+    margin-top: 10px;
+  }
+  .section-navbar .navbar-konten ul li {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    margin-right: 25px;
+    border-bottom: 1px solid antiquewhite;
+  }
+  .section-navbar .navbar-konten ul li a {
+    color: white !important;
+    font-size: 20px;
+  }
+  .section-navbar .navbar-konten ul li a:hover {
+    color: #5ffaff !important;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-weight: bold;
+    border-bottom: 1px solid aqua;
+  }
+  .section-navbar .navbar-konten button {
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+  }
+  .section-hero {
+    min-height: 760px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+  }
+  .section-hero .kiri img {
+    height: 250px;
+    margin-bottom: 50px;
+  }
+  .section-hero .kanan {
+    padding-right: 0px;
+  }
+  .section-hero .kanan p {
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+  }
+  .section-about-us .about-us-content .logo-about {
+    margin-top: 46px;
+    margin-bottom: 20px;
+  }
+  .section-about-us .about-us-content .logo-about img {
+    height: 150px;
+  }
+  .section-about-us .about-us-content .konten {
+    width: 352px;
+    padding: 20px 50px;
+  }
+  .section-about-us .about-us-content .konten h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .section-about-us .about-us-content .konten hr {
+    width: 180px;
+    border: 1px solid;
+  }
+  .section-about-us .about-us-content .konten ul {
+    font-size: 13px;
+    list-style: none;
+    padding-right: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
