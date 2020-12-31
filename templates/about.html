@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
 <!-- About us -->
 
 <div class="section-about-us" id="tentang-kami">
@@ -6,7 +10,7 @@
     <section class="heading">
       <div class="row">
         <div class="col text-center 
-                 section-features-heading">
+                  section-features-heading">
           <h2>TENTANG KAMI</h2>
         </div>
       </div>
@@ -15,7 +19,7 @@
     <section class="about-us-content">
       <div class="justify-content-center row text-center logo-about">
         <div class="col">
-          <img src="../../Files/components/homepage/about-hero-logo.png" alt="" srcset="">
+          <img src="static/img/about-hero-logo.png" alt="" srcset="">
         </div>
       </div>
 
@@ -140,3 +144,5 @@
     </div>
   </section>
 </div>
+</div>
+{% endblock %}

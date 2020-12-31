@@ -9,8 +9,7 @@
     <meta charset="UTF-8">
     <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../templates/bootstrap/bootstrap-4.5.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../style/warga/style.css">
+    <link rel="stylesheet" href="../style/main.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="shortcut icon" href="../../Files/components/icon-logo.ico" />
 
@@ -32,6 +31,9 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                           <a class="nav-link" href="umkm.html">UMKM</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="dashboard.html">HOME</a>
                         </li>
                     </ul>
 
@@ -75,61 +77,65 @@
     </div>
 
     <!-- Konten Section  -->
-    <div class="container mt-5 mb-5">
+    <div class="warga-page">
+        <div class="container mt-5 mb-5">
 
-      <div class="judul">
-        Temukan Kerabat Anda Disini
-      </div>
+            <div class="judul">
+                Temukan Kerabat Anda Disini
+            </div>
 
-      <table id="example" class="display table " style="width:100%">
-        <thead style="background-color: #9360FA; color: rgb(255, 255, 255);"> 
-            <tr>
-                <th>Nama</th>
-                <th>Alamat</th>
-                <th>RT</th>
-                <th>No Telpon</th>
-                <th>Nama Panggilan</th>
-                <th>Pekerjaan</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Muhammad Ridho Rizqillah</td>
-                <td>Jl Batu Ceper V no 12B</td>
-                <td>012</td>
-                <td>09928919098</td>
-                <td>Ridho</td>
-                <td>Programmer</td>
-            </tr>
-            <tr>
-                <td>Muhammad Hafiz Hisbullah</td>
-                <td>Jl Batu Ceper VIII no 2</td>
-                <td>005</td>
-                <td>089123889927</td>
-                <td>Apis</td>
-                <td>Desainer</td>
-            </tr>
-            <tr>
-                <td>Muhammad Daffa Haryadi</td>
-                <td>Jl Batu Ceper VII no 21</td>
-                <td>007</td>
-                <td>90812833890</td>
-                <td>Dapa</td>
-                <td>Developper</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Nama</th>
-                <th>Alamat</th>
-                <th>RT</th>
-                <th>No Telpon</th>
-                <th>Nama Panggilan</th>
-                <th>Pekerjaan</th>
-            </tr>
-        </tfoot>
-      </table>
-     </div>
+            <div class="section-data">
+                <table id="example" class="display table " style="width:100%">
+                    <thead style="background-color: #9360FA; color: rgb(255, 255, 255);"> 
+                        <tr>
+                            <th>Nama</th>
+                            <th>Alamat</th>
+                            <th>RT</th>
+                            <th>No Telpon</th>
+                            <th>Nama Panggilan</th>
+                            <th>Pekerjaan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Muhammad Ridho Rizqillah</td>
+                            <td>Jl Batu Ceper V no 12B</td>
+                            <td>012</td>
+                            <td>09928919098</td>
+                            <td>Ridho</td>
+                            <td>Programmer</td>
+                        </tr>
+                        <tr>
+                            <td>Muhammad Hafiz Hisbullah</td>
+                            <td>Jl Batu Ceper VIII no 2</td>
+                            <td>005</td>
+                            <td>089123889927</td>
+                            <td>Apis</td>
+                            <td>Desainer</td>
+                        </tr>
+                        <tr>
+                            <td>Muhammad Daffa Haryadi</td>
+                            <td>Jl Batu Ceper VII no 21</td>
+                            <td>007</td>
+                            <td>90812833890</td>
+                            <td>Dapa</td>
+                            <td>Developper</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Alamat</th>
+                            <th>RT</th>
+                            <th>No Telpon</th>
+                            <th>Nama Panggilan</th>
+                            <th>Pekerjaan</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>  
+        </div>
+    </div>
     
     <!-- Footer -->
       <footer class="section-footer mt-5 mb-4" id="kontak-kami">

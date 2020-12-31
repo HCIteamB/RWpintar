@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -57,7 +59,8 @@ ROOT_URLCONF = 'rwpintar.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR, 'staticfile')], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +125,7 @@ USE_TZ = True
 
 STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/' 
-STATICFILES_DIR = [
-        os.path.join(BASE_DIR, 'rwpintar/static')
-]
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'staticfile')
+        ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
