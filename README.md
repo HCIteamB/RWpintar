@@ -1,5 +1,8 @@
 # Branch for developing RWpintar website
 
+## BUAT APIS
+ **STATICFILE** buat css/js/html kalo mau push lagi
+
 ## Project Specs ( *IMPORTANT* ) 
 - role based users (staff and user)
 - user -> register -> some data from register enter databaseRW
