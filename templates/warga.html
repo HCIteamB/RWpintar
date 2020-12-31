@@ -7,12 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
+    <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../templates/bootstrap/bootstrap-4.5.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../style/umkm/style.css">
+    <link rel="stylesheet" href="../style/warga/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="shortcut icon" href="../../Files/components/icon-logo.ico" />
 
-    <title>RW Pintar - Eksplorasi</title>
+    <title>RW Pintar - UMKM Details</title>
 </head>
 <body>
     
@@ -29,8 +31,8 @@
                 <div class="collapse navbar-collapse  navbar-konten" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                        <a class="nav-link" href="umkm.html">UMKM</a>
-                        </li>                        
+                          <a class="nav-link" href="umkm.html">UMKM</a>
+                        </li>
                     </ul>
 
                     <!-- Desktop -->
@@ -59,6 +61,8 @@
                                 <a href="home.html" class="dropdown-item">Logout</a>
                             </div>
                         </li>
+
+
                     </ul>
                     <!-- mobile -->
                     <ul class="navbar-nav d-block d-lg-none">
@@ -70,116 +74,65 @@
           </div>
     </div>
 
-    <!-- Hero Section  -->
-    <div class="section-hero mb-3">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="logo-section ">
-              <img src="../../Files/components/UMKM/logo.svg" alt="">
-          </div>
-        </div>
+    <!-- Konten Section  -->
+    <div class="container mt-5 mb-5">
+
+      <div class="judul">
+        Temukan Kerabat Anda Disini
       </div>
-    </div>
 
-    <!-- konten-section -->
-    <div class="konten-section mt-5">
-      <div class="container">
-
-        <div class="row text-center justify-content-center mb-5 title-konten">
-          Daftar UMKM <br>
-          RW 01 KEBON KELAPA, Jakarta Pusat
-        </div>
-
-        <div class="mb-4">
-          <div class="form-inline my-lg-0 ">
-              <input class="form-control mr-sm-2" type="search" placeholder="Cari UMKM" aria-label="Search">
-              <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-          </div>
-        </div>
-
-
-        <div class=" col-md-12 umkm-konten mb-3">
-          <div class="row ">
-            <div class="d-flex">
-              <img  src="../../Files/components/UMKM/thumbnail.svg" alt="">
-              <div class="col-lg-5 col-md-5">
-                <div class="umkm-title mb-2">
-                  CAFE ALGOE 05
-                </div>
-                <div class="konten-isi">
-                  <p >
-                    Salah satu warung Indomie yang ada 
-                    di batu ceper, hal yang membuat terkenal 
-                    adalah pedagangnya yang friendly dan sambalnya 
-                    yang terkenal di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                  </p>
-                  <a href="umkm-detail.html" class="card-link selengkapnya">
-                    Baca selengkapnya disini….
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-
-        <div class=" col-md-12 umkm-konten mb-3 ">
-          <div class="row ">
-            <div class="d-flex">
-              <img src="../../Files/components/UMKM/thumbnail.svg" alt="">
-              <div class="col-lg-5 col-md-5">
-                <div class="umkm-title mb-2">
-                  GASKEUN CAFE
-                </div>
-                <div class="konten-isi">
-                  <p >
-                    Warung pancong yang ada 
-                    di batu ceper, hal yang membuat terkenal 
-                    adalah pedagangnya yang friendly dan pancongnya yang ajib
-                    di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                  </p>
-                  <a href="umkm-detail.html" class="card-link selengkapnya">
-                    Baca selengkapnya disini….
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-
-        <div class=" col-md-12 umkm-konten mb-3">
-          <div class="row ">
-            <div class="d-flex">
-              <img src="../../Files/components/UMKM/thumbnail.svg" alt="">
-              <div class="col-lg-5 col-md-5">
-                <div class="umkm-title mb-2">
-                  Alpukat Kotjok Barokah
-                </div>
-                <div class="konten-isi">
-                  <p >
-                    Tempat pengolahan alpukat enak yang ada 
-                    di batu ceper, hal yang membuat terkenal 
-                    adalah pedagangnya yang friendly dan sambalnya 
-                    yang terkenal di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                  </p>
-                  <a href="umkm-detail.html" class="card-link selengkapnya">
-                    Baca selengkapnya disini….
-                  </a>
-                </div>
-             </div>
-            </div>
-          </div>
-        </div>
-            <div class="add-umkm text-center mt-4">
-              <a href="umkm-create.html"><button class="btn text-white bg-info eksplorasi" type="button">POSTING UMKM ANDA DISINI.....</button></a>
-            </div>
-        
-      </div>
-    </div>
-
+      <table id="example" class="display table " style="width:100%">
+        <thead style="background-color: #9360FA; color: rgb(255, 255, 255);"> 
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>RT</th>
+                <th>No Telpon</th>
+                <th>Nama Panggilan</th>
+                <th>Pekerjaan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Muhammad Ridho Rizqillah</td>
+                <td>Jl Batu Ceper V no 12B</td>
+                <td>012</td>
+                <td>09928919098</td>
+                <td>Ridho</td>
+                <td>Programmer</td>
+            </tr>
+            <tr>
+                <td>Muhammad Hafiz Hisbullah</td>
+                <td>Jl Batu Ceper VIII no 2</td>
+                <td>005</td>
+                <td>089123889927</td>
+                <td>Apis</td>
+                <td>Desainer</td>
+            </tr>
+            <tr>
+                <td>Muhammad Daffa Haryadi</td>
+                <td>Jl Batu Ceper VII no 21</td>
+                <td>007</td>
+                <td>90812833890</td>
+                <td>Dapa</td>
+                <td>Developper</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>RT</th>
+                <th>No Telpon</th>
+                <th>Nama Panggilan</th>
+                <th>Pekerjaan</th>
+            </tr>
+        </tfoot>
+      </table>
+     </div>
+    
     <!-- Footer -->
-      <footer class="section-footer mt-5 mb-4 text-center" id="kontak-kami">
+      <footer class="section-footer mt-5 mb-4" id="kontak-kami">
         <div class="container pt-5 pb-5">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -219,7 +172,7 @@
                                 <li>Jakarta Pusat</li>
                                 <li>Indonesia</li>
                                 <li><a href="#">0882-1192-1299</a></li>
-                                <li><a href="#">smartpeople@gmail.com</a></li>
+                                <li><a href="#">thebetawie@gmail.com</a></li>
                             </ul>
                         </div>          
 
@@ -231,20 +184,29 @@
           <div class="container-fluid copy">
               <div class="row border-top justify-content-center align-items-lg-center pt-4">
                   <p class="col-auto font-weight-light">
-                      2020 Copyright RW-Pintar &bull; All rights reserved &bull;
+                      2020 Copyright TheBetawie &bull; All rights reserved &bull;
                       Made in Jakarta
                   </p>
               </div>
           </div>
       </footer>
 
-  
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="../templates/retina/retina.js"></script>
-  
+    <script src="../vendor/vue/vue.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>$(document).ready(function() {
+        $('#example').DataTable( {
+            "order": [[ 3, "desc" ]]
+        } );
+    } );
+    </script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+
 
 </body>
 </html>

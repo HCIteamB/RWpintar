@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../templates/bootstrap/bootstrap-4.5.3-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../style/umkm/style.css">
+    <link rel="stylesheet" href="../style/umkm-create/style.css">
     <link rel="shortcut icon" href="../../Files/components/icon-logo.ico" />
 
     <title>RW Pintar - Eksplorasi</title>
@@ -86,94 +86,65 @@
       <div class="container">
 
         <div class="row text-center justify-content-center mb-5 title-konten">
-          Daftar UMKM <br>
+          MASUKKAN UMKM ANDA DISINI !!! <br>
           RW 01 KEBON KELAPA, Jakarta Pusat
         </div>
+<div class="row">
+          <div class="col-12">
+            <form action="">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Nama Toko</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          aria-describedby="name"
+                          name="storeName"
+                          value="Kafe Capung"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="price">Description</label>
+                        <textarea name="editor"></textarea>
+                      </div>
+                    </div>
 
-        <div class="mb-4">
-          <div class="form-inline my-lg-0 ">
-              <input class="form-control mr-sm-2" type="search" placeholder="Cari UMKM" aria-label="Search">
-              <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-          </div>
-        </div>
-
-
-        <div class=" col-md-12 umkm-konten mb-3">
-          <div class="row ">
-            <div class="d-flex">
-              <img  src="../../Files/components/UMKM/thumbnail.svg" alt="">
-              <div class="col-lg-5 col-md-5">
-                <div class="umkm-title mb-2">
-                  CAFE ALGOE 05
-                </div>
-                <div class="konten-isi">
-                  <p >
-                    Salah satu warung Indomie yang ada 
-                    di batu ceper, hal yang membuat terkenal 
-                    adalah pedagangnya yang friendly dan sambalnya 
-                    yang terkenal di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                  </p>
-                  <a href="umkm-detail.html" class="card-link selengkapnya">
-                    Baca selengkapnya disini….
-                  </a>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label for="thumbnails">Foto Toko</label>
+                        <input
+                          type="file"
+                          multiple
+                          class="form-control pt-1"
+                          id="thumbnails"
+                          aria-describedby="thumbnails"
+                          name="thumbnails"
+                        />
+                        <small class="text-muted">
+                          file harus berupa png / jpg, maks 2 mb
+                        </small>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-          </div>
-        </div>
-
-        <div class=" col-md-12 umkm-konten mb-3 ">
-          <div class="row ">
-            <div class="d-flex">
-              <img src="../../Files/components/UMKM/thumbnail.svg" alt="">
-              <div class="col-lg-5 col-md-5">
-                <div class="umkm-title mb-2">
-                  GASKEUN CAFE
-                </div>
-                <div class="konten-isi">
-                  <p >
-                    Warung pancong yang ada 
-                    di batu ceper, hal yang membuat terkenal 
-                    adalah pedagangnya yang friendly dan pancongnya yang ajib
-                    di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                  </p>
-                  <a href="umkm-detail.html" class="card-link selengkapnya">
-                    Baca selengkapnya disini….
-                  </a>
+              <div class="row mt-4">
+                <div class="col text-right">
+                  <button type="submit" class="btn btn-success px-5">
+                    Save Now
+                  </button>
                 </div>
               </div>
-            </div>
-            
+            </form>
           </div>
         </div>
-
-        <div class=" col-md-12 umkm-konten mb-3">
-          <div class="row ">
-            <div class="d-flex">
-              <img src="../../Files/components/UMKM/thumbnail.svg" alt="">
-              <div class="col-lg-5 col-md-5">
-                <div class="umkm-title mb-2">
-                  Alpukat Kotjok Barokah
-                </div>
-                <div class="konten-isi">
-                  <p >
-                    Tempat pengolahan alpukat enak yang ada 
-                    di batu ceper, hal yang membuat terkenal 
-                    adalah pedagangnya yang friendly dan sambalnya 
-                    yang terkenal di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                  </p>
-                  <a href="umkm-detail.html" class="card-link selengkapnya">
-                    Baca selengkapnya disini….
-                  </a>
-                </div>
-             </div>
-            </div>
-          </div>
-        </div>
-            <div class="add-umkm text-center mt-4">
-              <a href="umkm-create.html"><button class="btn text-white bg-info eksplorasi" type="button">POSTING UMKM ANDA DISINI.....</button></a>
-            </div>
         
       </div>
     </div>
@@ -244,7 +215,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="../templates/retina/retina.js"></script>
-  
+  <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace("editor");
+    </script>
 
 </body>
 </html>
