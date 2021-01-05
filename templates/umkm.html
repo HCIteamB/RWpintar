@@ -47,7 +47,7 @@
               </div>
               <div class="konten-isi">
                 <p>
-                {{list_all.descript}}
+                {{list_all.descript|truncatechars:250}}
                 </p>
                 <a href="{% url 'list_all' list_all.id %}" class="card-link selengkapnya">
                   Baca selengkapnya disini….
