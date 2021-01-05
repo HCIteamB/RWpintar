@@ -10908,7 +10908,7 @@ html {
 }
 
 .home-page .section-hero {
-  background-image: url(../../../Files/components/homepage/bg-hero.png);
+  background-image: url(../../../static/img/bg-hero.png);
   min-height: 860px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11670,7 +11670,7 @@ html {
 }
 
 .hero {
-  background-image: url(../../../Files/components/UMKM/backdrop_umkm.svg);
+  background-image: url(../../staticfile/img/backdrop_umkm.svg);
   min-height: 660px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11988,7 +11988,7 @@ html {
 }
 
 .create-UMKM .section-hero {
-  background-image: url(../../../Files/components/UMKM/backdrop_umkm.svg);
+  background-image: url(../../staticfile/img/backdrop_umkm.svg);
   min-height: 660px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12043,7 +12043,7 @@ html {
 }
 
 .eksplorasi-page .section-hero {
-  background-image: url(../../../Files/components/homepage/bg-hero.png);
+  background-image: url(../../img/bg-hero.png);
   min-height: 860px;
   background-repeat: no-repeat;
   background-size: cover;

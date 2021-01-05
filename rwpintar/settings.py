@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'imagefit',
 
     # Apps
     'accounts',
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'pages',
 ]
 
+IMAGEFIT_ROOT ="media"
 
 AUTH_USER_MODEL = 'accounts.Acc'
 

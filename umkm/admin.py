@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import umkm
+from .models import Umkm
 
-admin.site.register(umkm)
+admin.site.register(Umkm)
 

@@ -1,80 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/main.css">
-  <link rel="shortcut icon" href="../../Files/components/icon-logo.ico" />
-
-  <title>RW Pintar - UMKM</title>
-</head>
-
-<body>
-
-  <!-- Navbar -->
-  <div class="section-navbar">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-
-        <a class="navbar-brand logo" href="dashboard.html"><img
-            src="../../Files/components/homepage/Logo-full-transparent.png" alt=""></a>
-        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse  navbar-konten" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="umkm.html">UMKM</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">HOME</a>
-            </li>
-          </ul>
-
-          <!-- Desktop -->
-          <ul class="navbar-nav d-none d-lg-flex">
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
-                <img src="../../Files/components/user.svg" alt="" class="rounded-circle mr-2 profile-picture" />
-                Hi, Hafiz
-              </a>
-              <div class="dropdown-menu">
-                <a href="dashboard.html" class="dropdown-item">Dashboard</a>
-                <a href="settings.html" class="dropdown-item">Settings</a>
-                <div class="dropdown-divider"></div>
-                <a href="home.html" class="dropdown-item">Logout</a>
-              </div>
-            </li>
-          </ul>
-          <!-- mobile -->
-          <ul class="navbar-nav d-block d-lg-none">
-            <a href="#" class="nav-link">Hi, Hafiz</a>
-          </ul>
-        </div>
-    </div>
-    </nav>
-  </div>
-  </div>
-
+{% block content %}
   <!-- Hero Section  -->
   <div class="hero mb-3">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="logo-section ">
-          <img src="../../Files/components/UMKM/logo.svg" alt="">
+          <img src="{% static 'img/logo.svg' %}" alt="">
         </div>
       </div>
     </div>
@@ -89,85 +22,34 @@
         RW 01 KEBON KELAPA, Jakarta Pusat
       </div>
 
+      <form method="GET" action=".">
       <div class="mb-4">
         <div class="form-inline my-lg-0 ">
-          <input class="form-control mr-sm-2" type="search" placeholder="Cari UMKM" aria-label="Search">
+          <input class="form-control mr-sm-2" type="search" name="title_search" placeholder="Cari UMKM" aria-label="Search">
           <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
         </div>
       </div>
+      </form>
 
-      {% if umkm %}
 
-      {% else %}
+      <!--konten list-->
 
-      {% endif %}
-
-      <div class=" col-md-12 umkm-konten mb-3">
-        <div class="row ">
-          <div class="d-flex">
-            <img src="../../Files/components/UMKM/thumbnail.svg" alt="">
-            <div class="col-lg-5 col-md-5">
-              <div class="umkm-title mb-2">
-                CAFE ALGOE 05
-              </div>
-              <div class="konten-isi">
-                <p>
-                  Salah satu warung Indomie yang ada
-                  di batu ceper, hal yang membuat terkenal
-                  adalah pedagangnya yang friendly dan sambalnya
-                  yang terkenal di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                </p>
-                <a href="umkm-detail.html" class="card-link selengkapnya">
-                  Baca selengkapnya disini….
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      {% if list_alls %}
+        {% for list_all in list_alls  %}
 
       <div class=" col-md-12 umkm-konten mb-3 ">
         <div class="row ">
           <div class="d-flex">
-            <img src="../../Files/components/UMKM/thumbnail.svg" alt="">
+            <img src="{{list_all.photo_main.url}}" alt="">
             <div class="col-lg-5 col-md-5">
               <div class="umkm-title mb-2">
-                GASKEUN CAFE
+                {{list_all.title}}
               </div>
               <div class="konten-isi">
                 <p>
-                  Warung pancong yang ada
-                  di batu ceper, hal yang membuat terkenal
-                  adalah pedagangnya yang friendly dan pancongnya yang ajib
-                  di batu ceper, banyak orang yang senang akan masakan sambalnya.
+                {{list_all.descript}}
                 </p>
-                <a href="umkm-detail.html" class="card-link selengkapnya">
-                  Baca selengkapnya disini….
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class=" col-md-12 umkm-konten mb-3">
-        <div class="row ">
-          <div class="d-flex">
-            <img src="../../Files/components/UMKM/thumbnail.svg" alt="">
-            <div class="col-lg-5 col-md-5">
-              <div class="umkm-title mb-2">
-                Alpukat Kotjok Barokah
-              </div>
-              <div class="konten-isi">
-                <p>
-                  Tempat pengolahan alpukat enak yang ada
-                  di batu ceper, hal yang membuat terkenal
-                  adalah pedagangnya yang friendly dan sambalnya
-                  yang terkenal di batu ceper, banyak orang yang senang akan masakan sambalnya.
-                </p>
-                <a href="umkm-detail.html" class="card-link selengkapnya">
+                <a href="{% url 'list_all' list_all.id %}" class="card-link selengkapnya">
                   Baca selengkapnya disini….
                 </a>
               </div>
@@ -175,88 +57,63 @@
           </div>
         </div>
       </div>
+
+        {% endfor %}
+      {% else %}
+
+      <div class="col-md-12"> 
+        no umkm
+      </div>
+
+      {% endif %}
+
+
       <div class="add-umkm text-center mt-4">
         <a href="umkm-create.html"><button class="btn text-white bg-info eksplorasi" type="button">POSTING UMKM ANDA
             DISINI.....</button></a>
       </div>
 
-    </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="section-footer mt-5 mb-4 text-center" id="kontak-kami">
-    <div class="container pt-5 pb-5">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <div class="row">
-
-            <div class="col-12 col-lg-3">
-              <h5>FEATURES</h5>
-              <ul class="list-unstyled">
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Social Media</a></li>
-                <li><a href="#">Affiliate</a></li>
-              </ul>
-            </div>
-
-            <div class="col-12 col-lg-3">
-              <h5>ACCOUNT</h5>
-              <ul class="list-unstyled">
-                <li><a href="#">Refund</a></li>
-                <li><a href="#">Security</a></li>
-                <li><a href="#">Reward</a></li>
-              </ul>
-            </div>
-
-            <div class="col-12 col-lg-3">
-              <h5>COMPANY</h5>
-              <ul class="list-unstyled">
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Media</a></li>
-              </ul>
-            </div>
-
-            <div class="col-12 col-lg-3">
-              <h5>GET CONNECTED</h5>
-              <ul class="list-unstyled">
-                <li>Jakarta Pusat</li>
-                <li>Indonesia</li>
-                <li><a href="#">0882-1192-1299</a></li>
-                <li><a href="#">smartpeople@gmail.com</a></li>
-              </ul>
-            </div>
-
-          </div>
+      <!--pagination-->
+ <div class="row">
+        <div class="col-md-12">
+          {% if list_alls.has_other_pages %}
+            <ul class="pagination">
+              {% if list_alls.has_previous %}
+                <li class="page-item">
+                  <a href="?page={{list_alls.previous_page_number}}" class="page-link">&laquo;</a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <a class="page-link">&laquo;</a>
+                </li>
+              {% endif %}
+              {% for i in list_alls.paginator.page_range %}
+                {% if list_alls.number == i %}
+                  <li class="page-item active">
+                    <a class="page-link">{{i}}</a>
+                  </li>
+                {% else %}
+                  <li class="page-item">
+                    <a href="?page={{i}}" class="page-link">{{i}}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+              {% if list_alls.has_next %}
+                <li class="page-item">
+                  <a href="?page={{list_alls.next_page_number}}" class="page-link">&raquo;</a>
+                </li>
+              {% else %}
+                <li class="page-item disabled">
+                  <a class="page-link">&raquo;</a>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
         </div>
       </div>
+
+
     </div>
-
-    <div class="container-fluid copy">
-      <div class="row border-top justify-content-center align-items-lg-center pt-4">
-        <p class="col-auto font-weight-light">
-          2020 Copyright RW-Pintar &bull; All rights reserved &bull;
-          Made in Jakarta
-        </p>
-      </div>
-    </div>
-  </footer>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-    crossorigin="anonymous"></script>
-  <script src="../templates/retina/retina.js"></script>
-
-
-</body>
-
-</html>
+  </div>
+  {% endblock %}
