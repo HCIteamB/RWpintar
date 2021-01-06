@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'imagefit',
+    'activity_log',
 
     # Apps
     'accounts',
@@ -95,9 +96,15 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': 5432,
         'PASSWORD': '1234'
-    }
+    },
+    'logs':{
+
+        }
 }
 
+DATABASE_ROUTERS = ['activity_log.router.DatabaseAppsRouter']
+DATABASE_APPS_MAPPING = {'activity_log': 'logs'}
+ACTIVITYLOG_AUTOCREATE_DB = True
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -152,3 +159,11 @@ MESSAGE_TAGS = {
 }
 
 LOGOUT_URL = '/'
+
+ACTIVITYLOG_ANONYMOUS = True
+
+ACTIVITYLOG_LAST_ACTIVITY = True
+
+ACTIVITYLOG_METHODS = ('POST', 'GET')
+
+ACTIVITYLOG_EXCLUDE_URLS = ('/admin/activity_log/activitylog', )
