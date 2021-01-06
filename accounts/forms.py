@@ -1,6 +1,11 @@
 from django import forms
+from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
-from .models import Acc, biodata
+from django.db.models import Q
+
+from .models import biodata
+
+User = get_user_model()
 
 class LoginForm(forms.Form):
     email = forms.EmailField(label='email')
@@ -13,7 +18,7 @@ class RegisterForm(forms.ModelForm):
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
 
     class Meta:
-        model = Acc
+        model = User
         fields = ('email', 'first_name', 'last_name', 'nik',)
 
     def clean_password2(self):
@@ -26,8 +31,14 @@ class RegisterForm(forms.ModelForm):
 
     def save(self, commit=True):
         # Save the provided password in hashed format
-        user = super().save(commit=False)
+        user = super(RegisterForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
         if commit:
             user.save()
         return user
+
+
+class biodata(forms.ModelForm):  
+    class Meta:  
+        model = biodata  
+        fields = "__all__"  

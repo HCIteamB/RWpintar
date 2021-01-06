@@ -19,16 +19,18 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-12 col-sm-12 kiri">
-          <img src="../../Files/components/signup/signup-image.png" alt="" />
+          <img src="" alt="" />
         </div>
         <div class="col-lg-7 col-md-12 col-sm-12 kanan">
           <div class="login-session">
-            <a href="signup.html" class="back">
+            <a href="{% url 'home' %}" class="back">
               <i class="fa fa-arrow-left" style="font-size: 20px"></i>
             </a>
-            <p>PILIH LOKASI ANDA</p>
+            <p>Lengkapi Biodata Anda</p>
 
-            <form class="form-signIn">
+            <form class="form-signIn" method="POST" action="/biodata" >
+              {% csrf_token %}  
+              {{form}}
               <div class="row">
                 <div class="col">
                   <div class="form-group">
@@ -40,72 +42,41 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <label for="sel1">Provinsi</label>
-                  <select class="form-control" id="provinsi" placeholder="Masukkan Provinsi">
-                    <option>Pilih Provinsi</option>
-                    <option>DKI JAKARTA</option>
-                    <option>Surabaya</option>
-                    <option>Bandung</option>
+                  <label for="sel1">Gender</label>
+                  <select class="form-control" id="provinsi" placeholder="Masukkan Gender anda">
+                    <option>isi gender anda</option>
+                    <option>Laki Laki</option>
+                    <option>Perempuan</option>
                   </select>
                 </div>
 
                 <div class="col">
-                  <label for="sel1">Kota</label>
-                  <select class="form-control" id="kota" placeholder="Masukkan Kota">
-                    <option>Pilih Kota</option>
-                    <option>Jakarta Pusat</option>
-                    <option>Jakarta Barat</option>
-                    <option>Jakarta Timur</option>
-                    <option>Jakarta Utara</option>
-                    <option>Jakarta Selatan</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <label for="sel1">Kecamatan</label>
-                  <select class="form-control" id="provinsi" placeholder="Masukkan Provinsi">
-                    <option>Pilih Kecamatan</option>
-                    <option>Gambir</option>
-                  </select>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="kelahiran">Tanggal Lahir</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        name="kelahiran"
+                        id="kelahiran"
+                        aria-describedby="emailHelp"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                <div class="col">
-                  <label for="sel1">Kelurahan</label>
-                  <select class="form-control" id="kota" placeholder="Masukkan Kota">
-                    <option>Pilih Kelurahan</option>
-                    <option>Kebon Kelapa</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <label for="sel1">RW</label>
-                  <select class="form-control" id="provinsi" placeholder="Masukkan Provinsi">
-                    <option>Pilih RW</option>
-                    <option>001</option>
-                    <option>002</option>
-                    <option>003</option>
-                    <option>004</option>
-                    <option>005</option>
-                    <option>006</option>
-                    <option>007</option>
-                    <option>008</option>
-                    <option>009</option>
-                    <option>010</option>
-                    <option>011</option>
-                    <option>012</option>
-                    <option>013</option>
-                  </select>
-                </div>
-              </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="mobile">Mobile</label>
+                          <input type="text" class="form-control" id="mobile" name="mobile" value="+628 1312 88199" />
+                        </div>
+                      </div>
+                    </div>
 
               <a href="signin.html">
                 <button type="button" class="btn btn-primary">Daftar</button>
               </a>
-              <small id="forgot" class="form-text text-muted">Sudah Punya Akun ? <a href="signin.html">Masuk</a></small>
             </form>
           </div>
         </div>

@@ -15,13 +15,15 @@
   <!-- lOGIN SECTION -->
   <div class="section-login">
     <div class="container">
+      <!--alert message-->
+      {% include 'partials/_error.html' %}
       <div class="row">
         <div class="col-lg-6 col-md-12 kiri">
           <img src="{% static 'img/signin-image.png' %}" alt="" />
         </div>
         <div class="col-lg-6 col-md-12 kanan">
           <div class="login-session">
-            <a href="home.html" class="back">
+            <a href="{% url 'home' %}" class="back">
               <i class="fa fa-arrow-left" style="font-size: 20px"></i>
             </a>
 
@@ -29,16 +31,17 @@
 
             <form class="form-signIn" action="{% url 'login' %}" method="POST">
               {% csrf_token %}
+              {{form}}
               <div class="form-group">
-                <label for="exampleInputEmail1" for="email">Username / Email</label>
-                <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                <label for="id_email" for="email">Email</label>
+                <input type="email" class="form-control" name="email" required id="id_email"
                   aria-describedby="emailHelp" placeholder="Enter email" />
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                   else.</small>
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                <label for="id_password">Password</label>
+                <input type="password" class="form-control" name="password" required id="id_password" placeholder="Password" />
               </div>
 
               <input type="submit" value="Login" class="btn btn-primary">

@@ -1,10 +1,11 @@
+{% load static %}
 <!-- Navbar -->
 <div class="section-navbar">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
 
-      <a class="navbar-brand logo" href="dashboard.html"><img
-          src="../../Files/components/homepage/Logo-full-transparent.png" alt=""></a>
+      <a class="navbar-brand logo" href="{% url 'home' %}"><img src="{% static 'img/Logo-full-transparent.png' %}"
+          alt=""></a>
       <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -13,18 +14,20 @@
       <div class="collapse navbar-collapse  navbar-konten" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item ">
-            <a class="nav-link" href="#features">Fitur</a>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="umkm.html">UMKM</a>
+            <a class="nav-link" href="{% url 'umkm-list' %}">UMKM</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#tentang-kami">Tentang Kami</a>
+            <a class="nav-link" href="{% url 'warga' %}">Warga</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#kontak-kami">Hubungi Kami</a>
+            <a class="nav-link" href="#">Titip Saran</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">Tentang Kami</a>
+          </li>
         </ul>
 
         <!-- Desktop -->
@@ -32,13 +35,17 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
               <img src="../../Files/components/user.svg" alt="" class="rounded-circle mr-2 profile-picture" />
-              Hi, Hafiz
+              Hi, {{ user.first_name }}
             </a>
             <div class="dropdown-menu">
-              <a href="dashboard.html" class="dropdown-item">Dashboard</a>
-              <a href="settings.html" class="dropdown-item">Settings</a>
+              <a href="{% url 'biodata' %}" class="dropdown-item">Biodata</a>
+              <a href="{% url 'setting' %}" class="dropdown-item">Settings</a>
               <div class="dropdown-divider"></div>
-              <a href="home.html" class="dropdown-item">Logout</a>
+              <a href="{% url 'logout' %}" class="dropdown-item" rel="external">Logout</a>
+              <form action="{% url 'logout' %}" method="POST" id="logout">
+                {% csrf_token %}
+                <input type="hidden">
+              </form>
             </div>
           </li>
 
@@ -46,8 +53,8 @@
         </ul>
         <!-- mobile -->
         <ul class="navbar-nav d-block d-lg-none">
-          <a href="settings.html" class="nav-link">Hi, Hafiz</a>
-          <a href="home.html" class="nav-link">Logout</a>
+          <a href="settings.html" class="nav-link">Hi, {{ user.first_name }}</a>
+          <a href="{% url 'logout' %}" class="nav-link">Logout</a>
         </ul>
       </div>
   </div>

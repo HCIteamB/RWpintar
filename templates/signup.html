@@ -19,6 +19,7 @@
   <!-- lOGIN SECTION -->
   <div class="section-signup">
     <div class="container">
+      {% include 'partials/_error.html' %}
       <div class="row">
         <div class="col-lg-5 col-md-12 col-sm-12 kiri">
           <img src="{% static 'img/signup-image.png' %}" alt="" />
@@ -26,7 +27,7 @@
         <div class="col-lg-7 col-md-12 col-sm-12 kanan">
           <div class="login-session">
             <br />
-            <a href="signin.html" class="back">
+            <a href="{% url 'login' %}" class="back">
               <i class="fa fa-arrow-left" style="font-size: 20px"></i>
             </a>
 
@@ -37,15 +38,15 @@
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="NamaDepan" for="email">Nama Depan</label>
-                    <input type="text" class="form-control" name="NamaDepan" id="exampleInputEmail1"
+                    <label for="id_first_name" for="email">Nama Depan</label>
+                    <input type="text" class="form-control" name="first_name" required id="id_first_name"
                       aria-describedby="emailHelp" placeholder="Enter email" />
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group">
-                    <label for="NamaBelakang">Nama Belakang</label>
-                    <input type="text" name="NamaBelakang" class="form-control" id="NamaBelakang"
+                    <label for="id_last_name">Nama Belakang</label>
+                    <input type="text" name="last_name" class="form-control" required id="id_last_name"
                       placeholder="Nama Belakang" />
                   </div>
                 </div>
@@ -53,57 +54,33 @@
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="NIK">NIK</label>
-                    <input type="number" class="form-control" name="NIK" id="NIK" aria-describedby="emailHelp"
+                    <label for="id_nik">NIK</label>
+                    <input type="text" class="form-control" name="nik" required id="id_nik" aria-describedby="emailHelp"
                       placeholder="Masukkan NIK" />
                   </div>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label for="kelahiran">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="kelahiran" id="kelahiran" aria-describedby="emailHelp"
-                      placeholder="" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="row jenis-kelamin">
-                <div class="form-group">
-                  <label>Jenis Kelamin</label>
-                  <div class="row">
-                    <div class="form-check">
-                      <label class="form-check-label" for="Laki">
-                        Laki-laki
-                      </label>
-                      <input class="form-check-input" type="radio" name="gender" id="Laki" value="option1" />
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="Perempuan">
-                        Perempuan
-                      </label>
-                      <input class="form-check-input" type="radio" name="gender" id="Perempuan" value="option2" />
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1" for="email">Email</label>
-                <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                <label for="id_email" for="email">Email</label>
+                <input type="email" class="form-control" name="email" required id="id_email"
                   aria-describedby="emailHelp" placeholder="Enter email" />
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                <label for="id_password1">Password</label>
+                <input type="password" class="form-control" name="password1"required id="id_password1" placeholder="Password" />
               </div>
 
-              <a href="{% url 'signup-next' %}">
-                <button type="button" class="btn btn-primary">LANJUT</button>
-              </a>
-              <small id="forgot" class="form-text text-muted">Sudah Punya Akun ? <a href="signin.html">Masuk</a></small>
+              <div class="form-group">
+                <label for="id_password2">Masukkan Password lagi</label>
+                <input type="password" class="form-control" name="password2" required id="id_password2" placeholder="Password" />
+              </div>
+
+              <input type="submit" value="Login" class="btn btn-primary">
+
+              <small id="forgot" class="form-text text-muted">Sudah Punya Akun ? <a href="{% url 'login' %}">Masuk</a></small>
+              <small id="forgot" class="form-text text-muted">kembali ke halaman utama <a href="#">Masuk</a></small>
             </form>
           </div>
         </div>
