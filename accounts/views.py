@@ -2,14 +2,15 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.contrib.auth import logout as auth_logout
 from django.views.generic import CreateView, FormView
-from django.http import HttpResponse
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 from django.contrib import messages, auth
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.conf import settings
-from django.utils.http import is_safe_url
+from django.contrib.auth.forms import UserChangeForm
 
-from .forms import  RegisterForm, LoginForm, biodata
+from .forms import  RegisterForm, LoginForm, UserForm, EditProfileForm 
 from .models import Acc
 
 User = get_user_model()
@@ -64,17 +65,18 @@ def warga(request):
 
 
 def setting(request):
-    return render(request, 'settings.html')
+    return render(request, 'signup-next.html')
 
-def biodata(request):
-    if request.method == "POST":  
-        form = biodata(request.POST)  
-        if form.is_valid():  
-            try:  
-                form.save()  
-                return redirect('home')  
-            except:  
-                pass  
-    else:  
-        form = biodata(request.POST)  
-    return render(request,'signup-next.html',{'form':form})  
+def edit_profile(request):
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+        else:
+            return redirect('/')
+    else:
+        form = EditProfileForm(instance=request.user)
+        args = {'form': form}
+        return render(request, 'settings.html', args)

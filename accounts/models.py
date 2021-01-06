@@ -1,9 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.db.models.signals import post_save
+from django.contrib.auth import get_user_model
 
+
+User = get_user_model
 
 class AccountManager(BaseUserManager):
-
     def create_user(self, email, first_name, last_name, nik, password=None):
         if not email:
             raise ValueError('User harus memiliki email')
@@ -40,12 +43,21 @@ class AccountManager(BaseUserManager):
 
 
 
-
 class Acc(AbstractBaseUser):
+
+    GENDER_CHOICE = (
+        ('F', 'Perempuan'),
+        ('M', 'Pria'),
+        )
+
     email = models.EmailField(verbose_name="email", max_length=60, unique=True)
     first_name = models.CharField(verbose_name="nama depan", max_length=255)
     last_name = models.CharField(verbose_name="nama belakang", max_length=255)
     nik = models.CharField(verbose_name="nomor induk kependudukan", max_length=20)
+    birth = models.DateField(default=None, verbose_name='ttl', null=True)
+    gender = models.CharField(max_length=300, choices = GENDER_CHOICE, verbose_name='gender', blank=True)
+    adress = models.TextField(verbose_name='alamat', blank=True)
+    contact = models.CharField(max_length=20, verbose_name="nomor telepon", blank=True)
     date_joined = models.DateTimeField(verbose_name='date joined', auto_now_add=True)
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
@@ -67,23 +79,6 @@ class Acc(AbstractBaseUser):
     def has_module_perms(self, app_label):
         # Simplest possible answer: Yes, always
         return True
-
-
-
-class biodata(models.Model): 
-    GENDER_CHOICE = (
-        ('F', 'Perempuan'),
-        ('M', 'Pria'),
-        )
-    acc = models.OneToOneField(Acc, verbose_name='Account', on_delete=models.CASCADE)
-    birth = models.DateField(default=None, verbose_name='ttl')
-    gender = models.CharField(max_length=300, choices = GENDER_CHOICE, verbose_name='gender')
-    adress = models.TextField(verbose_name='alamat')
-    contact = models.CharField(max_length=20, verbose_name="nomor telepon")
-
-    def __str__(self):
-        return self.acc
-
 
 
 

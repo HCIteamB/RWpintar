@@ -1,9 +1,9 @@
 from django import forms
+from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.db.models import Q
 
-from .models import biodata
 
 User = get_user_model()
 
@@ -37,8 +37,22 @@ class RegisterForm(forms.ModelForm):
             user.save()
         return user
 
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'nik', 'birth' , 'gender']
 
-class biodata(forms.ModelForm):  
-    class Meta:  
-        model = biodata  
-        fields = "__all__"  
+
+class EditProfileForm(UserChangeForm):
+    template_name='settings.html'
+
+    class Meta:
+        model = User
+        fields = (
+            'email',
+            'first_name',
+            'last_name',
+            'nik',
+            'contact',
+            'adress'
+        )

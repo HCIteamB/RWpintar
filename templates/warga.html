@@ -19,7 +19,7 @@
             <th>Alamat</th>
             <th>No HP</th>
             <th>NIK</th>
-            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
           </tr>
         </thead>
         <tbody>
@@ -28,10 +28,10 @@
           <tr>
             <td>{{warga.first_name}}</td>
             <td>{{warga.last_name}}</td>
-            <td>012</td>
-            <td>09928919098</td>
+            <td>{{warga.adress}}</td>
+            <td>{{warga.contact}}</td>
             <td>{{warga.nik}}</td>
-            <td>Programmer</td>
+            <td>{{warga.birth}}</td>
           </tr>
           {% endfor %}
           {% endif %}
@@ -39,12 +39,12 @@
         </tbody>
         <tfoot>
           <tr>
-            <th>Nama</th>
+            <th>Nama depan</th>
+            <th>Nama Belakang</th>
             <th>Alamat</th>
-            <th>RT</th>
-            <th>No Telpon</th>
-            <th>Nama Panggilan</th>
-            <th>Pekerjaan</th>
+            <th>No HP</th>
+            <th>NIK</th>
+            <th>Tanggal Lahir</th>
           </tr>
         </tfoot>
       </table>

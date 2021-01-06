@@ -31,7 +31,6 @@
 
             <form class="form-signIn" action="{% url 'login' %}" method="POST">
               {% csrf_token %}
-              {{form}}
               <div class="form-group">
                 <label for="id_email" for="email">Email</label>
                 <input type="email" class="form-control" name="email" required id="id_email"
