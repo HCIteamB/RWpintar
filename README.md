@@ -1,3 +1,8 @@
+## FINAL REPORT ##
+> Report Assignment -> [.pdf]() <br>
+> Here's our Website Source Code -> [link](https://github.com/HCIteamB/RWpintar/tree/development) <br>
+> Here's our Website -> [Site Deployment](http://rwpintar.xyz/)
+
 # RWpintar #
 
 It's already almost 1 year after the start of coronavirus outbreak.
