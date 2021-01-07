@@ -167,3 +167,8 @@ ACTIVITYLOG_LAST_ACTIVITY = True
 ACTIVITYLOG_METHODS = ('POST', 'GET')
 
 ACTIVITYLOG_EXCLUDE_URLS = ('/admin/activity_log/activitylog', )
+
+try:
+    from .local_settings impot *
+except ImportError:
+    pass
