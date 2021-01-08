@@ -1,7 +1,13 @@
 # Branch for developing RWpintar website
 
+
 ## BUAT APIS
  **STATICFILE** buat css/js/html kalo mau push lagi
+ 
+ ``````
+ For continuation development of this website [this](https://github.com/HCIteamB/rwpintar-dev)
+ will be used
+ ``````
 
 ## Project Specs ( *IMPORTANT* ) 
 - role based users (staff and user)
@@ -20,11 +26,9 @@
 
 ## TODO list
 - [x] Make base template for pages 
-- [ ] make html file for static pages (home and about)
-- [ ] make database model scheme
-- [ ] Make database model
-  - [ ] model for...
-- [ ] make ....
+- [x] make html file for static pages (home and about)
+- [x] make database model scheme
+- [x] Make database model
 
 ### maintained by 
 - [Takachii](https://github.com/Takachii15)
