@@ -1,5 +1,5 @@
 ## FINAL REPORT ##
-> Report Assignment -> [.pdf](https://github.com/HCIteamB/RWpintar/blob/main/Final-Report-Projek.pdf) <br>
+> Report Assignment -> [.pdf](https://github.com/HCIteamB/RWpintar/blob/main/Final-Report-Projek.pdf) Link Video -> [YouTube](https://youtu.be/w2R08QUk2_g) <br>
 > Here's our Website Source Code -> [link](https://github.com/HCIteamB/RWpintar/tree/development) <br>
 > Here's our Website -> [Site Deployment](http://rwpintar.xyz/)
 
